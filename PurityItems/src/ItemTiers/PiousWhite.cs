@@ -20,7 +20,7 @@ namespace PurityItems.src.ItemTiers
         protected override ColorIndex Color => ColorsAPI.RegisterColor(new Color32(141, 201, 255, 255));
         protected override ColorIndex DarkColor => ColorsAPI.RegisterColor(new Color32(102, 135, 225, 255));
 
-        //protected override Texture IconBackgroundTexture => PIPlugin.Bundle.LoadAsset<Sprite>("PureBackgroundIcon").texture;
+        protected override Texture IconBackgroundTexture => PIPlugin.Bundle.LoadAsset<Sprite>("texPiousBGIcon").texture;
         protected override GameObject DropletDisplayPrefab => CreateDroplet();
 
         protected override bool CanBeScrapped => false;

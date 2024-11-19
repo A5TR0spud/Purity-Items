@@ -27,13 +27,17 @@ namespace PureItemsPlugin
         public const string PluginAuthor = "A5TR0spud";
         public const string PluginName = "PurityItems";
         public const string PluginVersion = "0.1.0";
-        public const string TokenPrefix = "PURITY_ITEMS";
+        public const string TokenPrefix = "PURITY_ITEMS_";
         public static PIPlugin Instance;
+        public static AssetBundle Bundle;
 
         public void Awake()
         {
             Instance = this;
             Log.Init(Logger);
+
+            Bundle = AssetBundle.LoadFromFile(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Info.Location), "AssetBundles", "purityitems"));
+
             InitItems();
         }
 

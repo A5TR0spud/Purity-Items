@@ -1,0 +1,8 @@
+{
+  "en": {
+    "PURITY_ITEMS_ITEM_REFRACTION_OF_BLOOD_NAME": "Refraction of Blood",
+    "PURITY_ITEMS_ITEM_REFRACTION_OF_BLOOD_PICKUP": "Increase max health and regen with levels.",
+    "PURITY_ITEMS_ITEM_REFRACTION_OF_BLOOD_DESC": "Increases <style=cIsHealing>maximum health</style> by 2 <style=cStack>(+2 per stack, per level)</style>. Increases <style=cIsHealing>regeneration</style> by +0.1 hp/s <style=cStack>(+0.1 hp/s per stack, per level)</style>.",
+    "PURITY_ITEMS_ITEM_REFRACTION_OF_BLOOD_LORE": ":O",
+  }
+}

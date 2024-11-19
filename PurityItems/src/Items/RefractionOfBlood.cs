@@ -19,7 +19,7 @@ namespace PurityItems.src.Items
         public static ItemDef ItemDef;
 
         protected override CombinedItemTier Tier => PiousWhite.PiousWhiteTierDef;
-        //protected override Sprite PickupIconSprite => LegacyResourcesAPI.Load<Sprite>("Textures/MiscIcons/texGameResultUnknownIcon");
+        protected override Sprite PickupIconSprite => LegacyResourcesAPI.LoadAsync<Sprite>("Textures/ItemIcons/texStarSeedIcon").WaitForCompletion();
         //protected override GameObject PickupModelPrefab => ;
         private static List<ItemIndex> convertItems;
 
@@ -48,8 +48,11 @@ namespace PurityItems.src.Items
                 {
                     int count = sender.inventory.GetItemCount(ItemDef);
 
-                    args.levelHealthAdd += 2 * count;
-                    args.levelRegenAdd += 0.1f * count;
+                    if (count > 0)
+                    {
+                        args.levelHealthAdd += 2 * count;
+                        args.levelRegenAdd += 0.1f * count;
+                    }
                 }
             };
         }
